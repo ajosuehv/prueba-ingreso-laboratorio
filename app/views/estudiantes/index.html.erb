@@ -1,0 +1,24 @@
+<body>
+<div class="container-fluid">
+  <h1>Listado de estudiantes</h1>
+  <table border="1">
+    <tr>
+      <th></th>
+      <th>Número de cuenta</th>
+      <th>Nombre</th>
+      <th>Detalles</th>
+    </tr>
+    <% nlista = 1 %>
+    <% @estudiantes.each do |estudiante| %>
+        <tr>
+          <td><%= nlista %> </td>
+          <td><%= estudiante.ncuenta %></td>
+          <td><%= estudiante.nombre %></td>
+          <td><%= link_to 'Show', estudiante_path(estudiante) %></td>
+          <% nlista += 1 %>
+
+        </tr>
+    <% end %>
+  </table>
+</div>
+</body>
