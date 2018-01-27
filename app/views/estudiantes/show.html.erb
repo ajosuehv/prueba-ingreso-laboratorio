@@ -1,0 +1,27 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @estudiante.nombre %>
+</p>
+
+<form method="get" action="<%= estudiante_path(@estudiante) %>.csv">
+  <button class="btn btn-lg btn-success" type="submit">Descargar datos en csv!</button>
+</form>
+
+<p>
+<table border="1">
+  <tr>
+    <th>n</th>
+    <th>Dato</th>
+  </tr>
+  <% nlista = 0 %>
+  <% @estudiante.data.each do |datum| %>
+      <tr>
+        <td><%= nlista %> </td>
+
+        <td><%= datum %></td>
+        <% nlista += 1 %>
+
+      </tr>
+  <% end %>
+</table>
+</p>
