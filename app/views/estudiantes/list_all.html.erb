@@ -1,0 +1,33 @@
+<body>
+<div class="container-fluid">
+  <h1>Listado de estudiantes</h1>
+  <table border="1">
+    <tr>
+      <th align="center"></th>
+      <th align="center">Número de cuenta</th>
+      <th align="center">Nombre</th>
+      <th align="center">Sigma Exacta</th>
+      <th align="center">Media Exacta</th>
+      <th align="center">Sigma de los datos</th>
+      <th align="center">Media de los Datos</th>
+      <th align="center">Detalles</th>
+
+    </tr>
+    <% nlista = 1 %>
+    <% @estudiantes.each do |estudiante| %>
+        <tr>
+          <td align="center"><%= nlista %> </td>
+          <td align="center"><%= estudiante.ncuenta %></td>
+          <td align="center"><%= estudiante.nombre %></td>
+          <td align="center"><%= estudiante.exact_sigma %></td>
+          <td align="center"><%= estudiante.exact_mean %></td>
+          <td align="center"><%= estudiante.real_sigma %></td>
+          <td align="center"><%= estudiante.real_mean %></td>
+
+          <td><%= link_to 'Detalles', estudiante_path(estudiante) %></td>
+          <% nlista += 1 %>
+        </tr>
+    <% end %>
+  </table>
+</div>
+</body>
