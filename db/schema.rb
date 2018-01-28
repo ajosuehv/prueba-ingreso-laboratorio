@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 20180126080839) do
     t.string "nombre"
     t.string "ncuenta"
     t.string "correo_electronico"
-    t.decimal "exact_sigma", precision: 10
-    t.decimal "exact_mean", precision: 10
-    t.decimal "real_sigma", precision: 10
-    t.decimal "real_mean", precision: 10
+    t.float "exact_sigma", limit: 24
+    t.float "exact_mean", limit: 24
+    t.float "real_sigma", limit: 24
+    t.float "real_mean", limit: 24
     t.decimal "seed", precision: 10
     t.text "data"
     t.datetime "created_at", null: false

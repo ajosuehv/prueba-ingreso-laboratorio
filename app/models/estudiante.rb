@@ -1,11 +1,11 @@
 class Estudiante < ApplicationRecord
-  after_initialize :set_stats
+  after_initialize  :set_stats, if: :new_record?
   serialize :data
 
   def set_stats
-    self.seed= rand(1..9999)
-    self.exact_mean= rand(1..100)
-    self.exact_sigma= rand(1..10)
+    self.seed = rand(1.0..9999.0).round(4)
+    self.exact_mean= rand(1.0..1000.0).round(4)
+    self.exact_sigma= rand(2.5..10.0).round(4)
   end
 
   def to_csv

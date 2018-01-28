@@ -1,23 +1,41 @@
 
   <div class="jumbotron">
-    <h1>Instrucciones: </h1>
     <p class="lead">
       Hola, estás ingresando a la web del <b>Grupo 8092 de Laboratorio de Mecánica</b>
     <p>
-      Si has decidido tomar este curso te pedimos que,
+    <h1>Instrucciones: </h1>
+      Si has decidido tomar este curso te pedimos lo siguiente,
     </p>
     <ul>
-      <li>Ingreses tus datos en el formulario que aparecerá al dar click en el botón de abajo.</li>
-      <li>Descargues el archivo con los datos aleatorios que se te presentarán.</li>
-      <li>Calcules la media de lo datos.</li>
-      <li>Calcules la varianza de los mismos datos.</li>
+      <li>Ingresa tus datos en el formulario que aparecerá al dar click en el botón de abajo.</li>
+        <ul>
+          <li> Al ingresar se generara un conjunto de datos aleatorios, este es único y personal.</li>
+        </ul>
+      <li>Descarga el archivo con los datos aleatorios.</li>
+      <li>Calcula la varianza de los mismos datos.</li>
     </ul>
-    Entrega los resultados hechos a mano, así como los todos los pasos intermedios.
+    <h2>Reporta tus resultados:</h2>
+    <ul>
+      <li>
+        Todos los cálculos y resultados deberan ser hechos a mano, así como los todos los pasos intermedios.
+      </li>
+      <li>
+        <b>No se aceptarán calculos o resultados hechos a computadora o con calculadora. </b>
+        <ul>
+          <li>Es decir, no debes omitir u obviar ningún paso por sencillo o trivial que parezca.</li>
+        </ul>
+      </li>
+      <li>
+        Solo serán tomados en cuenta los reportes que cumplan con estos requisitos.
+      </li>
+    </ul>
     </p>
     <p>
       Esta pequeña prueba es tu boleto de entrada al laboratorio.
     </p>
-    <p><a class="btn btn-lg btn-success" href="<%= new_estudiante_path %>" role="button">Acepto las condiciones</a></p>
+    <p><a class="btn btn-lg btn-success" href="<%= new_estudiante_path %>" role="button">Acepto las condiciones</a>
+    <a class="btn btn-lg btn-danger" href="<%= estudiantes_path %>" role="button">No acepto las condiciones</a></p>
+
   </div>
 
 

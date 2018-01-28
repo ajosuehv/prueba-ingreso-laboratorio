@@ -1,6 +1,6 @@
 class EstudiantesController < ApplicationController
+  http_basic_authenticate_with name: "jcabrera", password: "jcabrera", only: :list_all
   def index
-    @estudiantes = Estudiante.all
   end
   def new
     @estudiante = Estudiante.new
@@ -28,6 +28,9 @@ class EstudiantesController < ApplicationController
       format.html
       format.csv { send_data @estudiante.to_csv }
     end
+  end
+  def list_all
+    @estudiantes = Estudiante.all
   end
   private
     def estudiante_params
