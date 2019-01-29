@@ -10,7 +10,12 @@
       <th align="center">Media Exacta</th>
       <th align="center">Sigma de los datos</th>
       <th align="center">Media de los Datos</th>
+      <th align="center">Media correcta</th>
+      <th align="center">Sigma correcta</th>
+      <th align="center">Sigma completa</th>
+      <th align="center">Progreso de sigma</th>
       <th align="center">Detalles</th>
+      <th align="center">Modificar</th>
 
     </tr>
     <% nlista = 1 %>
@@ -23,8 +28,12 @@
           <td align="center"><%= estudiante.exact_mean %></td>
           <td align="center"><%= estudiante.real_sigma %></td>
           <td align="center"><%= estudiante.real_mean %></td>
-
+          <td align="center"><%= estudiante.mean_correct %></td>
+          <td align="center"><%= estudiante.sigma_correct %></td>
+          <td align="center"><%= estudiante.sigma_complete %></td>
+          <td align="center"><%= estudiante.sigma_progress %></td>
           <td><%= link_to 'Detalles', estudiante_path(estudiante) %></td>
+          <td><%= link_to 'Modificar', edit_estudiante_path(estudiante) %></td>
           <% nlista += 1 %>
         </tr>
     <% end %>

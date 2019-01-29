@@ -10,6 +10,10 @@ class CreateEstudiantes < ActiveRecord::Migration[5.1]
       t.float :real_mean
       t.decimal :seed
       t.text :data
+      t.boolean :mean_correct
+      t.boolean :sigma_correct
+      t.boolean :sigma_complete
+      t.float :sigma_progress
       t.timestamps
     end
   end

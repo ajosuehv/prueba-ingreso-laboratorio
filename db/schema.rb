@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180126080839) do
+ActiveRecord::Schema.define(version: 20190129064626) do
 
   create_table "estudiantes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "nombre"
@@ -22,6 +22,25 @@ ActiveRecord::Schema.define(version: 20180126080839) do
     t.float "real_mean", limit: 24
     t.decimal "seed", precision: 10
     t.text "data"
+    t.boolean "mean_correct", default: false, null: false
+    t.boolean "sigma_correct", default: false, null: false
+    t.boolean "sigma_complete", default: false, null: false
+    t.float "sigma_progress", limit: 24, default: 0.0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "acount"
+    t.string "sigma"
+    t.string "mean"
+    t.string "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

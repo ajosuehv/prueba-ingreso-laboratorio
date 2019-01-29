@@ -1,0 +1,41 @@
+<%= form_with(model: estudiante, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :estudiante_nombre %>
+  </div>
+
+ <div class="field">
+    <%= form.label :ncuenta %>
+    <%= form.text_field :ncuenta, id: :estudiante_ncuenta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo_electronico %>
+    <%= form.text_field :correo_electronico, id: :estudiante_correo_electronico %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mean_correct %>
+    <%= form.check_box :mean_correct, id: :estudiante_mean_correct %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sigma_correct %>
+    <%= form.check_box :sigma_correct, id: :estudiante_sigma_correct %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sigma_complete %>
+    <%= form.check_box :sigma_complete, id: :sigma_complete %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sigma_progress %>
+    <%= form.text_field :sigma_progress, id: :estudiante_sigma_progress %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

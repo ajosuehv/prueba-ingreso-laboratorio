@@ -4,8 +4,8 @@ class Estudiante < ApplicationRecord
 
   def set_stats
     self.seed = rand(1.0..9999.0).round(4)
-    self.exact_mean= rand(1.0..1000.0).round(4)
-    self.exact_sigma= rand(2.5..10.0).round(4)
+    self.exact_mean = rand(1.0..1000.0).round(4)
+    self.exact_sigma = rand(2.5..10.0).round(4)
   end
 
   def to_csv
@@ -15,11 +15,8 @@ class Estudiante < ApplicationRecord
       csv << attributes
       self.data.each do |datum|
         csv << [index, datum]
-        index+=1
+        index += 1
       end
     end
   end
-
-
-
 end

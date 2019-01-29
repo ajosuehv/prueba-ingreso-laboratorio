@@ -6,8 +6,9 @@
 <form method="get" action="<%= estudiante_path(@estudiante) %>.csv">
   <button class="btn btn-lg btn-success" type="submit">Descargar datos en csv!</button>
 </form>
-
 <p>
+<% if @mostrar_lista %>
+
 <table border="1">
   <tr>
     <th>n</th>
@@ -24,4 +25,5 @@
       </tr>
   <% end %>
 </table>
+<% end %>
 </p>
